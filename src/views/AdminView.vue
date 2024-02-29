@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import EventComponent from '@/components/EventComponent.vue';
-import CardEvent from '../components/Home/CardEvents.vue';
+
+import AdminCards from '@/components/AdminCards.vue';
 </script>
 
 <template>
@@ -8,7 +9,7 @@ import CardEvent from '../components/Home/CardEvents.vue';
 <div id="eventComponent">
   <EventComponent />
 </div>
-<CardEvent />
+<AdminCards />
   </main>
 </template>
 

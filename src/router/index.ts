@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import { useAuthStore } from '@/stores/authStore'
-
+import EditEventComponent from '@/components/EditEventComponent.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -35,6 +35,12 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/ListView.vue')
     },
+    {
+    path: '/edit-event/:id',
+    name: 'EditEvent',
+    component: EditEventComponent,
+    props: true // Esto permite pasar props a través de la ruta
+ },
     {
       path: '/admin',
       name: 'admin',
